@@ -1,0 +1,10 @@
+#-*- coding: utf-8 -*-
+import telebot
+API_TOKEN = '761165945:AAEJ8arJh4414mrlEwGqv0EiaBkt_65cOAY'
+bot = telebot.TeleBot(API_TOKEN)
+#Inicio
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+	msg = bot.reply_to(message,"Olá, eu sou o Dollynho.")
+
+bot.polling()
